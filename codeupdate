@@ -1,0 +1,21 @@
+local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/VisualRoblox/Roblox/main/UI-Libraries/Visual%20UI%20Library/Source.lua'))()
+
+local Window = Library:CreateWindow('Chivuzcheats', 'Race Clickers', 'Race Clickers', 'rbxassetid://10618928818', false, 'VisualUIConfigs', 'Default')
+
+local Tab = Window:CreateTab('Insta TP', true, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
+
+local Section = Tab:CreateSection('Insta TP')
+
+
+
+local Button = Section:CreateButton('Insta TP to Signs', function()
+    for i,v in pairs(game.Workspace.Environment:GetChildren()) do
+        for o,b in pairs(v:GetChildren()) do
+            if b.Name == "Sign" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = b.CFrame
+                wait(.2)
+             end
+         end
+     end
+end)
+
